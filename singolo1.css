@@ -1,0 +1,51 @@
+body {
+    width: 1024px;
+    margin: auto;
+}
+
+header {
+    height: 95px;
+    background-color: #2d303a;
+    display: flex;
+    justify-content: center;
+
+}
+
+h1 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 371px;
+}
+
+span {
+    color: white;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    /* font-size: 10px; */
+}
+
+span:hover{
+    color: #f06c64;
+}
+
+/* span.hover-star:hover {
+    color: #f06c64;
+} */
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+
+}
