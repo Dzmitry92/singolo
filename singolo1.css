@@ -108,3 +108,12 @@ span:hover{
     background-color: #acacac;
     border-radius: 5px;
 }
+
+.vertical-phone .image-box {
+    margin-top: 24px;
+    width: 188px;
+    height: 333px;
+    background-image: url(/assets/firsImagePhone.png);
+    border-color: grey;
+    border-radius: 2px;
+}
