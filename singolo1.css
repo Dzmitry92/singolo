@@ -232,3 +232,67 @@ nav span:hover{
     height: 6px;
     background-color: #ea676b;
 }
+
+.section-two {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+.content-section-two {
+    display: flex;
+    flex-direction: column;
+    width: 944px;
+}
+
+.icon-description-countaner {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon-description-countaner .first-line-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.customDesign-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.customDesign-box .image-box .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    border: 1px solid #666d89;
+}
+
+.customDesign-box .image-box .circle .image {
+    width: 32px;
+    height: 32px;
+    color: #666d89;
+    background-image: url(/assets/pen.svg);
+}
+
+.inovativeIdeas-box .image-box .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    border: 1px solid #666d89;
+}
+
+.inovativeIdeas-box .image-box .circle .image {
+    width: 24px;
+    height: 32px;
+    color: #666d89;
+    background-image: url(/assets/bulb.svg);
+}
