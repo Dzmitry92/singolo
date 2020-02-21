@@ -1,10 +1,10 @@
 body {
-    width: 1024px;
+    width: 1020px;
     margin: auto;
 }
 
 header {
-    height: 95px;
+    height: 89px;
     background-color: #2d303a;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@ header {
 }
 
 h1 {
-    padding-top: 2px;
+    padding-top: 0;
     padding-left: 1px;
     color: white;
     font-family: 'Lato', sans-serif;
@@ -47,6 +47,11 @@ nav span {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    color:  rgba(118, 126, 158, 255);
 }
 
 nav span:hover{
@@ -245,13 +250,27 @@ nav span:hover{
     width: 944px;
 }
 
-.icon-description-countaner {
+.description-container h2 {
+    margin: 58px 0 20px 2px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    color: rgba(102, 109, 137, 255);
+    font-weight: bold;
+}
+
+.description-container p {
+    margin: 0 0 0 3px;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.icon-description-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.icon-description-countaner .first-line-description,  .second-line-description{
+.icon-description-container .first-line-description,  .second-line-description{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -333,6 +352,7 @@ nav span:hover{
     font-family: 'Lato', sans-serif;
 }
 
-.inovativeIdeas-box {
-    margin-left: 20px;
+.text-box p {
+    margin: 0;
+    font-size: 14px;
 }
