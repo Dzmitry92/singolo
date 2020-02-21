@@ -247,21 +247,28 @@ nav span:hover{
 
 .icon-description-countaner {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
-.icon-description-countaner .first-line-description {
+.icon-description-countaner .first-line-description,  .second-line-description{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.customDesign-box {
+.customDesign-box, .inovativeIdeas-box, .loveIsTheAnswer-box,
+.responsiveLayout-box, .support-box, .feelLikeAStar-box {
     display: flex;
     justify-content: flex-start;
 }
 
-.customDesign-box .image-box .circle{
+.customDesign-box .image-box .circle,
+.inovativeIdeas-box .image-box .circle, 
+.loveIsTheAnswer-box .image-box .circle, 
+.responsiveLayout-box .image-box .circle,
+.support-box .image-box .circle,
+.feelLikeAStar-box .image-box .circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,26 +280,59 @@ nav span:hover{
 }
 
 .customDesign-box .image-box .circle .image {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     color: #666d89;
     background-image: url(/assets/pen.svg);
 }
 
-.inovativeIdeas-box .image-box .circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 58px;
-    height: 58px;
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    border: 1px solid #666d89;
-}
-
 .inovativeIdeas-box .image-box .circle .image {
-    width: 24px;
-    height: 32px;
+    width: 26px;
+    height: 34px;
     color: #666d89;
     background-image: url(/assets/bulb.svg);
+}
+
+.loveIsTheAnswer-box .image-box .circle .image {
+    width: 36px;
+    height: 30px;
+    color: #666d89;
+    background-image: url(/assets/heart.svg);
+}
+
+.responsiveLayout-box .image-box .circle .image {
+    width: 26px;
+    height: 34px;
+    color: #666d89;
+    background-image: url(/assets/phone.svg);
+}
+
+.support-box .image-box .circle .image {
+    width: 34px;
+    height: 28px;
+    color: #666d89;
+    background-image: url(/assets/bubble.svg);
+}
+
+.feelLikeAStar-box .image-box .circle .image {
+    width: 38px;
+    height: 34px;
+    color: #666d89;
+    background-image: url(/assets/star.svg);
+}
+
+.text-box {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text-box h3 {
+    color: #666d89;
+    font-family: 'Lato', sans-serif;
+}
+
+.inovativeIdeas-box {
+    margin-left: 20px;
 }
