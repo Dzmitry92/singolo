@@ -16,6 +16,7 @@ h1 {
     padding-left: 1px;
     color: white;
     font-family: 'Lato', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 24px;
@@ -251,17 +252,20 @@ nav span:hover{
 }
 
 .description-container h2 {
-    margin: 58px 0 20px 2px;
+    margin: 69px 0 26px 2px;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
     color: rgba(102, 109, 137, 255);
-    font-weight: bold;
+    font-weight: 900;
+    line-height: 17.87px;
 }
 
 .description-container p {
     margin: 0 0 0 3px;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 30px;
+    font-weight: 300;
+    white-space: pre-wrap;
 }
 
 .icon-description-container {
