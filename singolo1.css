@@ -11,15 +11,14 @@ header {
 
 }
 
-h1 {
-    padding-top: 0;
-    padding-left: 1px;
-    color: white;
+.content-header h1 {
     font-family: 'Lato', sans-serif;
+    font-size: 24px;
     font-weight: 700;
+    line-height: 6.32px;
+    color: white;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 24px;
 }
 
 h1 span {
@@ -30,7 +29,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 11px;
+    margin-top: 10px;
     width: 372px;
 }
 
@@ -46,8 +45,11 @@ nav span {
     color: white;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 12px;
+    line-height: 6.32px;
+    text-align: justify;
 }
 
 p {
@@ -81,15 +83,17 @@ nav span:hover{
 
 .content-section-one {
     margin: 0 auto;
+    margin-bottom: 30px;
     width: 944px;
     height: 458px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
 }
 
 .arrow-left {
+    margin: 25px 0 0 4px;
     width: 16px;
     height: 27px;
     background-image: url(/assets/leftArrow.png);
@@ -97,6 +101,7 @@ nav span:hover{
 }
 
 .vertical-phone {
+    margin: 0 0 0 54px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -104,7 +109,7 @@ nav span:hover{
     width: 215px;
     height: 458px;
     background-color: #f2f2f2;
-    border-radius: 23px;
+    border-radius: 28px;
     box-shadow: 25px 25px #ce5d56;
 }
 
@@ -135,7 +140,7 @@ nav span:hover{
 }
 
 .vertical-phone .image-box {
-    margin-top: 24px;
+    margin-top: 21px;
     width: 188px;
     height: 333px;
     background-image: url(/assets/firsImagePhone.png);
@@ -155,21 +160,22 @@ nav span:hover{
 }
 
 .vertical-phone .button .inside-circle {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background-color: white;
     border: 2px solid #c8c8c8;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .horizontal-phone {
+    margin-left: 98px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 458px;
     height: 215px;
     background-color: #f2f2f2;
-    border-radius: 23px;
+    border-radius: 28px;
     box-shadow: 25px 25px #ce5d56;
 }
 
@@ -185,15 +191,15 @@ nav span:hover{
 }
 
 .horizontal-phone .button .inside-circle {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background-color: white;
     border: 2px solid #c8c8c8;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .horizontal-phone .image-box {
-    margin-left: 9px;
+    margin-left: 6px;
     width: 333px;
     height: 188px;
     background-image: url(/assets/SecondImagePhone.png);
@@ -202,7 +208,7 @@ nav span:hover{
 }
 
 .horizontal-phone .speaker {
-    margin-left: 24px;
+    margin-left: 21px;
     width: 5px;
     height: 36px;
     background-color: #acacac;
@@ -228,6 +234,7 @@ nav span:hover{
 }
 
 .arrow-right {
+    margin: 25px 0 0 80px;
     width: 16px;
     height: 27px;
     background-image: url(/assets/rightArrow.png);
@@ -243,6 +250,7 @@ nav span:hover{
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
+    height: 494px;
 }
 
 .content-section-two {
@@ -252,7 +260,7 @@ nav span:hover{
 }
 
 .description-container h2 {
-    margin: 69px 0 26px 2px;
+    margin: 69px 0 26px 1px;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
     color: rgba(102, 109, 137, 255);
@@ -262,13 +270,15 @@ nav span:hover{
 
 .description-container p {
     margin: 0 0 0 3px;
+    padding-top: 1px;
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
-    white-space: pre-wrap;
+    text-align: justify;
 }
 
 .icon-description-container {
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -276,14 +286,20 @@ nav span:hover{
 
 .icon-description-container .first-line-description,  .second-line-description{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
+}
+
+.second-line-description {
+    margin-top: 22px;
 }
 
 .customDesign-box, .inovativeIdeas-box, .loveIsTheAnswer-box,
 .responsiveLayout-box, .support-box, .feelLikeAStar-box {
     display: flex;
     justify-content: flex-start;
+    width: 300px;
+    height: 100px;
 }
 
 .customDesign-box .image-box .circle,
@@ -295,11 +311,19 @@ nav span:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
     background-color: #f2f2f2;
     border-radius: 50%;
     border: 1px solid #666d89;
+}
+
+.customDesign-box, .responsiveLayout-box {
+    margin-left: 4px;
+}
+
+.inovativeIdeas-box, .support-box {
+    margin-left: -2px;
 }
 
 .customDesign-box .image-box .circle .image {
@@ -348,15 +372,31 @@ nav span:hover{
     margin-left: 20px;
     display: flex;
     flex-direction: column;
+}
 
+.loveIsTheAnswer-box .text-box, .feelLikeAStar-box .text-box {
+    margin-left: 20px;
 }
 
 .text-box h3 {
+    margin: -2px 0 11px 0;
     color: #666d89;
     font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 17.86px;
+    font-weight: 900;
+    text-align: justify;
 }
 
 .text-box p {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 21.56px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.between-line-three {
+    height: 6px;
+    background-color: #ffffff;
 }
