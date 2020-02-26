@@ -8,6 +8,15 @@ p {
     color:  rgba(118, 126, 158, 255);
 }
 
+.section-three {
+    background-color: #2d303a;
+}
+
 .content-section-three {
     width: 940px;
+}
+
+.content-section-three .button-container {
+    display: flex;
+    justify-content: space-between;
 }
