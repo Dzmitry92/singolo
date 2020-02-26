@@ -1,0 +1,13 @@
+body {
+    width: 1020px;
+    margin: auto;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    color:  rgba(118, 126, 158, 255);
+}
+
+.content-section-three {
+    width: 940px;
+}
