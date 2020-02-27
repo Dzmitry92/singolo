@@ -10,6 +10,7 @@ p {
 
 .section-three {
     background-color: #2d303a;
+    /* height: 870px; */
 }
 
 .content-section-three {
@@ -19,4 +20,47 @@ p {
 .content-section-three .button-container {
     display: flex;
     justify-content: space-between;
+    width: 288px;
+    height: 22px;
+}
+
+.content-section-three .button-container .button {
+    border: 1px solid #666d89;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content-section-three .button-container .button:hover {
+    border: 1px solid white;
+}
+
+.content-section-three .button-container .button.one {
+    width: 29px;
+}
+
+.content-section-three .button-container .button.two {
+    width: 78px;
+}
+
+.content-section-three .button-container .button.three {
+    width: 93px;
+}
+
+.content-section-three .button-container .button.four {
+    width: 57px;
+}
+
+.content-section-three .button-container .button span {
+    font-family: 'Lato', sans-serif;
+    color:  rgba(118, 126, 158, 255);
+    font-size: 12px;
+    line-height: 21,56px;
+}
+
+.portfolio-image-container {
+    display: flex;
+    justify-self: start;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 900px;
 }
