@@ -14,10 +14,9 @@ p {
     /* height: 870px; */
 }
 
-.content-section-three {
+.content-section {
     margin: 0 auto;
     width: 940px;
-    /* height: 864px; */
 }
 
 .text-container h2 {
@@ -38,7 +37,7 @@ p {
     text-align: justify;
 }
 
-.content-section-three .button-container {
+.content-section .button-container {
     margin-top: 19px;
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,7 @@ p {
     height: 22px;
 }
 
-.content-section-three .button-container .button {
+.content-section .button-container .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,27 +54,27 @@ p {
     cursor: pointer;
 }
 
-.content-section-three .button-container .button:hover {
+.content-section .button-container .button:hover {
     border: 1px solid white;
 }
 
-.content-section-three .button-container .button.one {
+.content-section .button-container .button.one {
     width: 29px;
 }
 
-.content-section-three .button-container .button.two {
+.content-section .button-container .button.two {
     width: 78px;
 }
 
-.content-section-three .button-container .button.three {
+.content-section .button-container .button.three {
     width: 93px;
 }
 
-.content-section-three .button-container .button.four {
+.content-section .button-container .button.four {
     width: 57px;
 }
 
-.content-section-three .button-container .button span {
+.content-section .button-container .button span {
     font-family: 'Lato', sans-serif;
     color:  rgba(118, 126, 158, 255);
     font-size: 12px;
