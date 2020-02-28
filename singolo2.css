@@ -19,8 +19,8 @@ p {
     width: 940px;
 }
 
-.text-container h2 {
-    margin: 67px 0 0 0;
+.text-container > h2 {
+    margin: 70px 0 0 0;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     line-height: 17.86px;
@@ -30,15 +30,19 @@ p {
 }
 
 .text-container p{
-    margin: 33px 0 0 0;
+    margin: 27px 0 0 0;
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
     text-align: justify;
 }
 
+.section-four .text-container > p{
+    margin: 26px 0 0 0;
+}
+
 .content-section .button-container {
-    margin-top: 19px;
+    margin-top: 11px;
     display: flex;
     justify-content: space-between;
     width: 288px;
@@ -50,7 +54,7 @@ p {
     justify-content: center;
     align-items: center;
     border: 1px solid #666d89;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -58,31 +62,39 @@ p {
     border: 1px solid white;
 }
 
+.content-section .button-container .button:hover span{
+    color: white;
+}
+
 .content-section .button-container .button.one {
     width: 29px;
 }
 
 .content-section .button-container .button.two {
-    width: 78px;
+    width: 76px;
 }
 
 .content-section .button-container .button.three {
-    width: 93px;
+    /* margin-left: 2px; */
+    width: 91px;
 }
 
 .content-section .button-container .button.four {
-    width: 57px;
+    width: 54px;
 }
 
 .content-section .button-container .button span {
+    padding: 0 0 2px 1px;
     font-family: 'Lato', sans-serif;
     color:  rgba(118, 126, 158, 255);
     font-size: 12px;
     line-height: 21,56px;
+    font-weight: 400;
+    text-align: justify;
 }
 
 .portfolio-image-container {
-    margin: 19px 0 67px 0;
+    margin: 18px 0 69px 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -93,6 +105,11 @@ p {
 .portfolio-image-container .image-box {
     width: 220px;
     height: 187px;
+    cursor: pointer;
+}
+
+.portfolio-image-container .image-box:hover {
+    box-shadow: 0 0 10px 1px black;
 }
 
 .portfolio-image-container .image-box.image-1 {
@@ -146,4 +163,90 @@ p {
 .between-line-four {
     height: 6px;
     background-color: #323746;
+}
+
+.section-four {
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.person-container {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jensen-box, .miles-box, .visari-box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.person-container:nth-child(2) {
+    margin-right: 1px;
+}
+
+.person-image-box {
+    width: 300px;
+    height: 300px;
+}
+
+.person-image-box.jensen-image {
+    background-image: url(/assets/Jensen-image.png);
+}
+
+.person-image-box.miles-image {
+    background-image: url(/assets/Miles-image.png);
+}
+
+.person-image-box.visari-image {
+    background-image: url(/assets/Visari-image.png);
+}
+
+.section-four .person-container h3 {
+    margin: 18px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    color:  rgba(118, 126, 158, 255);
+    font-size: 18px;
+    line-height: 17.86px;
+    font-weight: 900;
+    text-align: justify;
+}
+
+.section-four .person-container p {
+    margin: 9px 0 0 0;
+    font-size: 12px;
+    line-height: 21.56px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.section-four .person-container > .jensen-box > p {
+    /* text-align: left; */
+}
+
+.person-container .contact-box {
+    margin: 25px 0 67px 0;
+    width: 152px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-container .contact-box > .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #69708b;
+    border-radius: 50%;
+}
+
+.fab {
+    color: #666d89;
+}
+
+.between-line-five {
+    height: 6px;
+    background-color: #ffffff;
 }
