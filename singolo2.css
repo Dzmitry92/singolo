@@ -1,6 +1,6 @@
 body {
     width: 1020px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 p {
@@ -9,15 +9,37 @@ p {
 }
 
 .section-three {
+    display: flex;
     background-color: #2d303a;
     /* height: 870px; */
 }
 
 .content-section-three {
+    margin: 0 auto;
     width: 940px;
+    /* height: 864px; */
+}
+
+.text-container h2 {
+    margin: 67px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 17.86px;
+    font-weight: 900;
+    color:  rgba(118, 126, 158, 255);
+    text-align: justify;
+}
+
+.text-container p{
+    margin: 33px 0 0 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: justify;
 }
 
 .content-section-three .button-container {
+    margin-top: 19px;
     display: flex;
     justify-content: space-between;
     width: 288px;
@@ -25,6 +47,9 @@ p {
 }
 
 .content-section-three .button-container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #666d89;
     border-radius: 4px;
     cursor: pointer;
@@ -58,9 +83,68 @@ p {
 }
 
 .portfolio-image-container {
+    margin: 19px 0 67px 0;
     display: flex;
-    justify-self: start;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
     height: 600px;
-    width: 900px;
+}
+
+.portfolio-image-container .image-box {
+    width: 220px;
+    height: 187px;
+}
+
+.portfolio-image-container .image-box.image-1 {
+    background-image: url(/assets/singolo-portfolio-image-1.png);
+}
+
+.portfolio-image-container .image-box.image-2 {
+    background-image: url(/assets/singolo-portfolio-image-2.png)
+}
+
+.portfolio-image-container .image-box.image-3 {
+    background-image: url(/assets/singolo-portfolio-image-3.png)
+}
+
+.portfolio-image-container .image-box.image-4 {
+    background-image: url(/assets/singolo-portfolio-image-4.png)
+}
+
+.portfolio-image-container .image-box.image-5 {
+    background-image: url(/assets/singolo-portfolio-image-5.png)
+}
+
+.portfolio-image-container .image-box.image-6 {
+    background-image: url(/assets/singolo-portfolio-image-6.png)
+}
+
+.portfolio-image-container .image-box.image-7 {
+    background-image: url(/assets/singolo-portfolio-image-7.png)
+}
+
+.portfolio-image-container .image-box.image-8 {
+    background-image: url(/assets/singolo-portfolio-image-8.png)
+}
+
+.portfolio-image-container .image-box.image-9 {
+    background-image: url(/assets/singolo-portfolio-image-9.png)
+}
+
+.portfolio-image-container .image-box.image-10 {
+    background-image: url(/assets/singolo-portfolio-image-10.png)
+}
+
+.portfolio-image-container .image-box.image-11 {
+    background-image: url(/assets/singolo-portfolio-image-11.png)
+}
+
+.portfolio-image-container .image-box.image-12 {
+    background-image: url(/assets/singolo-portfolio-image-12.png)
+}
+
+.between-line-four {
+    height: 6px;
+    background-color: #323746;
 }
