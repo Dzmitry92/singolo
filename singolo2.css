@@ -221,10 +221,6 @@ p {
     text-align: justify;
 }
 
-.section-four .person-container > .jensen-box > p {
-    /* text-align: left; */
-}
-
 .person-container .contact-box {
     margin: 25px 0 67px 0;
     width: 152px;
@@ -232,7 +228,7 @@ p {
     justify-content: space-between;
 }
 
-.person-container .contact-box > .circle{
+.person-container .contact-box > .circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +236,24 @@ p {
     height: 30px;
     border: 1px solid #69708b;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.person-container .contact-box > .circle:hover {
+    /* box-shadow: 0 0 8px 0.5px gray; */
+    background-color: #4c6ef5;
+}
+
+.person-container .contact-box > .circle:hover .fa-facebook-f{
+    color: white;
+}
+
+.person-container .contact-box > .circle:hover .fa-twitter{
+    color: white;
+}
+
+.person-container .contact-box > .circle:hover .fa-linkedin-in{
+    color: white;
 }
 
 .fab {
