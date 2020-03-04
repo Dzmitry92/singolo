@@ -18,6 +18,21 @@ p {
     width: 940px;
 }
 
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-container > .form-box {
+    height: 364px;
+}
+
+.main-container > .form-box > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .between-line-six {
     height: 6px;
     background-color: #ea676b;
