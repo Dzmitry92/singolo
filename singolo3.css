@@ -3,8 +3,8 @@ body {
     margin: 0 auto;
 }
 
-h2, h3, p {
-    color: white;
+h2, h3, p, span{
+    color: rgba(240, 216, 217, 255);
     font-family: 'Lato', sans-serif;
 }
 
@@ -63,8 +63,13 @@ h2, h3, p {
 }
 
 .form-box > form > textarea {
-    width: 617px;
+    width: 613px;
     height: 200px;
+}
+
+.contact-box .fa-map-marker-alt, .fa-phone, .fa-envelope {
+    font-size: 12px;
+    color: rgba(240, 216, 217, 255);
 }
 
 .between-line-six {
@@ -74,11 +79,6 @@ h2, h3, p {
 
 footer {
     background-color: #2d303a;
-}
-
-span {
-    font-family: 'Lato', sans-serif;
-    color: white;
 }
 
 .content-section.footer-section {
