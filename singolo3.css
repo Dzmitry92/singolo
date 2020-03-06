@@ -18,9 +18,48 @@ h2, h3, p, span{
     width: 940px;
 }
 
+.text-container > h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 17.86px;
+    text-align: justify;
+}
+
 .main-container {
     display: flex;
     justify-content: flex-start;
+}
+
+.contact-box {
+    margin-left: 20px;
+}
+
+.contact-box h3 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 17.86px;
+}
+
+.contact-box > .contacts {
+    margin-top: 20px;
+}
+
+.contact-box p, .contacts span {
+    margin-top: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+    text-align: justify;
+}
+
+.contact-box p {
+    letter-spacing: -.1px;
+}
+
+.contact-box > .contacts i {
+    margin-right: 5px;
+    font-size: 10px;
 }
 
 .text-container > p {
@@ -60,6 +99,7 @@ h2, h3, p, span{
     font-weight: 400;
     color: rgba(244, 140, 143, 255);
     text-align: justify;
+    letter-spacing: -.5px;
 }
 
 .form-box > form > textarea {
@@ -86,6 +126,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.content-section.footer-section > span {
+    color: #69708b;
+    font-size: 10px;
+    text-align: justify;
 }
 
 .social-contact-box {
