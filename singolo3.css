@@ -19,6 +19,7 @@ h2, h3, p, span{
 }
 
 .text-container > h2 {
+    margin-top: 69px;
     font-size: 30px;
     font-weight: 900;
     line-height: 17.86px;
@@ -26,6 +27,7 @@ h2, h3, p, span{
 }
 
 .main-container {
+    margin-top: 44px;
     display: flex;
     justify-content: flex-start;
 }
@@ -42,11 +44,10 @@ h2, h3, p, span{
 }
 
 .contact-box > .contacts {
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 .contact-box p, .contacts span {
-    margin-top: 18px;
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
@@ -54,15 +55,21 @@ h2, h3, p, span{
 }
 
 .contact-box p {
+    margin-top: 12px;
     letter-spacing: -.1px;
 }
 
 .contact-box > .contacts i {
-    margin-right: 5px;
-    font-size: 10px;
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+.contact-box > .contacts span {
+    margin-left: 7px;
 }
 
 .text-container > p {
+    margin-top: 27px;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
@@ -83,28 +90,34 @@ h2, h3, p, span{
 .form-box > form > input, textarea {
     background-color: #d6564f;
     border: 1px solid #d6564f;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .form-box > form > input {
     margin-bottom: 16px;
-    height: 36px;
+    height: 34px;
     width: 617px;
 }
 
 .form-box > form > input::placeholder, textarea::placeholder{
-    padding-left: 15px;
-    font-size: 12px;
+    padding-left: 14px;
+    font-size: 11.5px;
     line-height: 21.56px;
     font-weight: 400;
     color: rgba(244, 140, 143, 255);
     text-align: justify;
-    letter-spacing: -.5px;
+    letter-spacing: .3px;
+}
+
+.form-box > form > textarea::placeholder {
+    padding-left: 12px;
+    padding-top: 5px;
+    letter-spacing: -1px;
 }
 
 .form-box > form > textarea {
     width: 613px;
-    height: 200px;
+    height: 196px;
 }
 
 .contact-box .fa-map-marker-alt, .fa-phone, .fa-envelope {
@@ -129,9 +142,15 @@ footer {
 }
 
 .content-section.footer-section > span {
+    padding-bottom: 2px;
     color: #69708b;
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
+}
+
+.content-section.footer-section > span > i {
+    margin: 0 1px 0 1px;
+    font-size: 10px;
 }
 
 .social-contact-box {
@@ -140,7 +159,7 @@ footer {
     width: 152px;
 }
 
-.fab {
+.circle > .fab {
     color: #69708b;
 }
 
