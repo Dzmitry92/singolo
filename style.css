@@ -12,20 +12,20 @@ header {
 }
 
 .content-header h1 {
+    margin: 0;
+    padding: 0 0 3px 0;
     font-family: 'Lato', sans-serif;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 700;
     line-height: 6.32px;
+    letter-spacing: -.4px;
+    text-align: justify;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 h1 span {
-    color: white;
-}
-
-h1:hover span {
     color: #f06c64;
 }
 
@@ -45,7 +45,7 @@ nav {
     border-radius: 50%;
 }
 
-nav span {
+nav > span {
     color: white;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
@@ -54,6 +54,27 @@ nav span {
     font-size: 12px;
     line-height: 6.32px;
     text-align: justify;
+}
+
+nav > span:nth-child(1) {
+    padding-left: 1px;
+    letter-spacing: -.2px;
+}
+
+nav > span:nth-child(3) {
+    padding-left: 2px;
+    padding-bottom: 1px;
+    letter-spacing: -.1px;
+}
+
+nav > span:nth-child(5) {
+    padding-left: 2px;
+    padding-bottom: 1px;
+    letter-spacing: -.1px;
+}
+
+nav > span:nth-child(7) {
+    padding-left: 1px;
 }
 
 p {
@@ -118,7 +139,8 @@ nav span:hover{
     height: 458px;
     background-color: #f2f2f2;
     border-radius: 28px;
-    box-shadow: 25px 25px #ce5d56;
+    /* box-shadow: 25px 25px #ce5d56; */
+    z-index: 2;
 }
 
 .vertical-phone .front-camera {
@@ -130,6 +152,7 @@ nav span:hover{
     height: 10px;
     background-color: #d8d8d8;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .vertical-phone .front-camera .red-point {
@@ -137,6 +160,7 @@ nav span:hover{
     height: 4px;
     background-color: red;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .vertical-phone .speaker {
@@ -145,6 +169,7 @@ nav span:hover{
     height: 5px;
     background-color: #acacac;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .vertical-phone .image-box {
@@ -154,6 +179,7 @@ nav span:hover{
     background-image: url(assets/firsImagePhone.png);
     border: 3px solid #c8c8c8;
     border-radius: 3px;
+    z-index: 2;
 }
 
 .vertical-phone .button {
@@ -165,6 +191,7 @@ nav span:hover{
     height: 43px;
     background-color: white;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .vertical-phone .button .inside-circle {
@@ -173,10 +200,21 @@ nav span:hover{
     background-color: white;
     border: 2px solid #c8c8c8;
     border-radius: 4px;
+    z-index: 2;
+}
+
+.shadow-phone-one {
+    position: absolute;
+    width: 240px;
+    height: 483px;
+    left: 274px;
+    top: 148px;
+    background-image: url(assets/Shadow@1X.png);
+    z-index: 1;
 }
 
 .horizontal-phone {
-    margin-left: 98px;
+    margin: 0 0 1px 98px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -184,7 +222,8 @@ nav span:hover{
     height: 215px;
     background-color: #f2f2f2;
     border-radius: 28px;
-    box-shadow: 25px 25px #ce5d56;
+    /* box-shadow: 25px 25px #ce5d56; */
+    z-index: 2;
 }
 
 .horizontal-phone .button {
@@ -196,6 +235,7 @@ nav span:hover{
     height: 43px;
     background-color: white;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .horizontal-phone .button .inside-circle {
@@ -204,6 +244,7 @@ nav span:hover{
     background-color: white;
     border: 2px solid #c8c8c8;
     border-radius: 4px;
+    z-index: 2;
 }
 
 .horizontal-phone .image-box {
@@ -213,6 +254,7 @@ nav span:hover{
     background-image: url(assets/SecondImagePhone.png);
     border: 3px solid #c8c8c8;
     border-radius: 3px;
+    z-index: 2;
 }
 
 .horizontal-phone .speaker {
@@ -221,6 +263,7 @@ nav span:hover{
     height: 36px;
     background-color: #acacac;
     border-radius: 5px;
+    z-index: 2;
 }
 
 .horizontal-phone .front-camera {
@@ -232,6 +275,7 @@ nav span:hover{
     height: 10px;
     background-color: #d8d8d8;
     border-radius: 50%;
+    z-index: 2;
 }
 
 .horizontal-phone .front-camera .red-point {
@@ -239,6 +283,17 @@ nav span:hover{
     height: 4px;
     background-color: red;
     border-radius: 50%;
+    z-index: 2;
+}
+
+.shadow-phone-two {
+    position: absolute;
+    width: 483px;
+    height: 240px;
+    left: 588px;
+    top: 269px;
+    background-image: url(assets/Shadow@2X.png);
+    z-index: 1; 
 }
 
 .arrow-right {
@@ -273,12 +328,13 @@ nav span:hover{
 }
 
 .description-container h2 {
-    margin: 69px 0 26px 1px;
+    margin: 69px 0 26px 2px;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
     color: rgba(102, 109, 137, 255);
     font-weight: 900;
     line-height: 17.87px;
+    text-align: justify;
 }
 
 .description-container p {
