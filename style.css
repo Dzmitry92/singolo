@@ -428,8 +428,8 @@ nav span:hover{
     justify-content: space-between;
     align-content: space-between;
     height: 600px;
-    width: 940px;
-    overflow: hidden;
+    /* width: 940px; */
+    /* overflow: hidden; */
 }
 
 .portfolio-image-container .image-box {
@@ -815,4 +815,20 @@ footer {
     border: 1px solid #69708b;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.social-contact-box > .circle:hover {
+    background-color: #4c6ef5;
+}
+
+.social-contact-box > .circle:hover .fa-facebook-f{
+    color: white;
+}
+
+.social-contact-box > .circle:hover .fa-twitter{
+    color: white;
+}
+
+.social-contact-box > .circle:hover .fa-linkedin-in{
+    color: white;
 }
