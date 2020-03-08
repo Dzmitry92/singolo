@@ -31,25 +31,10 @@
             <div class="content-section-one">
                 <div class="arrow-left"></div>
                 <div class="vertical-phone">
-                    <div class="front-camera">
-                        <div class="red-point"></div>
-                    </div>
-                    <div class="speaker"></div>
-                    <div class="image-box"></div>
-                    <div class="button">
-                        <div class="inside-circle"></div>
-                    </div>
+                    <div class="vertical-phone-container"></div>
                 </div>
-                <div class="shadow-phone-one"></div>
                 <div class="horizontal-phone">
-                    <div class="button">
-                        <div class="inside-circle"></div>
-                    </div>
-                    <div class="image-box"></div>
-                    <div class="speaker"></div>
-                    <div class="front-camera">
-                        <div class="red-point"></div>
-                    </div>
+                    <div class="horizontal-phone-container"></div>
                 </div>
                 <div class="shadow-phone-two"></div>
                 <div class="arrow-right"></div>
@@ -270,30 +255,35 @@
                 <div class="main-container">
                     <div class="form-box">
                         <form>
-                            <input type="text" name="name" placeholder="Name (Required)">
-                            <input type="text" name="login" placeholder="Email (Required)">
-                            <input type="text" name="textfield" placeholder="Subject">
+                            <input type="text" name="Name" placeholder="Name (Required)" required="">
+                            <input type="email" name="Email" placeholder="Email (Required)" required="">
+                            <input type="text" name="Subject" placeholder="Subject">
                             <textarea placeholder="Describe your project in detail..."></textarea>
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
                     <div class="contact-box">
                         <h3>Contact information</h3>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. 
                             Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla 
-                            sed nunc et tortor faucibus. Morbi at aliquet turpis, et consequat felis.
+                            sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                         </p>
                         <div class="contacts">
-                            <div>
+                            <div class="adres">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <span>Elm St. 14/05 Lost City</span>
                             </div>
-                            <div>
-                                <i class="fas fa-phone"></i>
-                                <span>03528 331 86 35</span>
+                            <div class="number-phone">
+                                <a href="tel:035283318635">
+                                    <i class="fas fa-phone"></i>
+                                    <span>03528 331 86 35</span>
+                                </a>
                             </div>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <span>info@singilo.com</span>
+                            <div class="mail">
+                                <a href="mailto:info@singolo.com">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@singilo.com</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -304,7 +294,7 @@
     </main>
     <footer>
         <div class="content-section footer-section">
-            <span><i class="far fa-copyright"></i>Copyright 2013</span>
+            <span>© Copyright 2013</span>
             <div class="social-contact-box">
                 <div class="circle">
                     <i class="fab fa-facebook-f"></i>
