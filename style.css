@@ -37,15 +37,7 @@ nav {
     width: 372px;
 }
 
-.navigation-point {
-    margin-top: 2px;
-    width: 2px;
-    height: 2px;
-    background-color: #404455;
-    border-radius: 50%;
-}
-
-nav > span {
+nav > .menu-link {
     color: white;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
@@ -54,27 +46,21 @@ nav > span {
     font-size: 12px;
     line-height: 6.32px;
     text-align: justify;
+    text-decoration: none;
 }
 
-nav > span:nth-child(1) {
-    padding-left: 1px;
-    letter-spacing: -.2px;
+nav > .menu-link::before {
+    content: ".";
+    position: relative;
+    right: 11px;
+    bottom: 2px;
+    color: #FFFFFF;
+    font-size: 16px;
+    opacity: .2;
 }
 
-nav > span:nth-child(3) {
-    padding-left: 2px;
-    padding-bottom: 1px;
-    letter-spacing: -.1px;
-}
-
-nav > span:nth-child(5) {
-    padding-left: 2px;
-    padding-bottom: 1px;
-    letter-spacing: -.1px;
-}
-
-nav > span:nth-child(7) {
-    padding-left: 1px;
+nav > .menu-link:nth-child(1)::before{
+    content: "";
 }
 
 p {
@@ -82,7 +68,7 @@ p {
     color:  rgba(118, 126, 158, 255);
 }
 
-nav span:hover{
+nav a:hover{
     color: #f06c64;
 }
 
