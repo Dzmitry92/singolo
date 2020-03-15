@@ -49,6 +49,11 @@ nav > .menu-link {
     text-decoration: none;
 }
 
+nav > .active-link {
+    color: #ea676b;
+    outline: none !important;
+}
+
 nav > .menu-link::before {
     content: ".";
     position: relative;
