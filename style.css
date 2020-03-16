@@ -135,7 +135,7 @@ main {
     align-items: center;
 }
 
-.item{
+.item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -209,7 +209,7 @@ main {
 .three-phones {
     width: 517px;
     height: 513px;
-    background-image: url(/assets/second-phone-slide.png);
+    background-image: url(assets/second-phone-slide.png);
 }
 
 .arrow-right {
