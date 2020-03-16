@@ -135,6 +135,12 @@ main {
     align-items: center;
 }
 
+.item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .black-display {
     background-color: black;
 }
@@ -198,6 +204,12 @@ main {
 .content-section-one .phone-btn:hover {
     background-color: gray;
     opacity: 0.3;
+}
+
+.three-phones {
+    width: 517px;
+    height: 513px;
+    background-image: url(/assets/second-phone-slide.png);
 }
 
 .arrow-right {
