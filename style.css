@@ -108,6 +108,14 @@ main {
     background-color: #f06c64;
 }
 
+.color-red {
+    background-color: #f06c64;
+}
+
+.color-blue {
+    background-color: #648BF0;
+}
+
 .content-section-one {
     margin: 0 auto;
     margin-bottom: 6px;
