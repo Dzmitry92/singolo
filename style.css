@@ -1,14 +1,24 @@
 body {
-    width: 1020px;
-    margin: auto;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 header {
     height: 89px;
+    width: 1024px;
     background-color: #2d303a;
     display: flex;
     justify-content: center;
+    z-index: 3;
+}
 
+.fixed {
+    position: fixed;
+}
+
+.fixed::after {
+    height: 6px;
+    background-color: #323746;
 }
 
 .content-header h1 {
@@ -37,44 +47,34 @@ nav {
     width: 372px;
 }
 
-.navigation-point {
-    margin-top: 2px;
-    width: 2px;
-    height: 2px;
-    background-color: #404455;
-    border-radius: 50%;
-}
-
-nav > span {
+nav > .menu-link {
     color: white;
-    cursor: pointer;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 6.32px;
     text-align: justify;
+    text-decoration: none;
 }
 
-nav > span:nth-child(1) {
-    padding-left: 1px;
-    letter-spacing: -.2px;
+nav > .active-link {
+    color: #ea676b;
+    outline: none !important;
 }
 
-nav > span:nth-child(3) {
-    padding-left: 2px;
-    padding-bottom: 1px;
-    letter-spacing: -.1px;
+nav > .menu-link::before {
+    content: ".";
+    position: relative;
+    right: 11px;
+    bottom: 2px;
+    color: #FFFFFF;
+    font-size: 16px;
+    opacity: .2;
 }
 
-nav > span:nth-child(5) {
-    padding-left: 2px;
-    padding-bottom: 1px;
-    letter-spacing: -.1px;
-}
-
-nav > span:nth-child(7) {
-    padding-left: 1px;
+nav > .menu-link:nth-child(1)::before{
+    content: "";
 }
 
 p {
@@ -82,13 +82,14 @@ p {
     color:  rgba(118, 126, 158, 255);
 }
 
-nav span:hover{
+nav a:hover{
     color: #f06c64;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
-.between-line-one {
-    height: 6px;
-    background-color: #323746;
+main {
+    padding-top: 89px;
 }
 
 .content-header {
@@ -102,22 +103,21 @@ nav span:hover{
 .section-one {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 594px;
     background-color: #f06c64;
 }
 
 .content-section-one {
     margin: 0 auto;
-    margin-bottom: 30px;
-    width: 944px;
-    height: 458px;
+    margin-bottom: 6px;
+    width: 938px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
 .arrow-left {
-    margin: 25px 0 0 4px;
     width: 16px;
     height: 27px;
     background-image: url(assets/rigthArrow.svg);
@@ -129,8 +129,17 @@ nav span:hover{
     opacity: 1;
 }
 
+.content-section-one > .phone-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.black-display {
+    background-color: black;
+}
+
 .vertical-phone {
-    margin: 25px 0 0 55px;
     position: relative;
     width: 240px;
     height: 483px;
@@ -141,10 +150,20 @@ nav span:hover{
     width: 240px;
     height: 483px;
     background-image: url(assets/iPhone-Vertical.png);
+    z-index: 1;
+}
+
+.vertical-phone > .black-display {
+    position: absolute;
+    top: 65px;
+    left: 14px;
+    height: 333px;
+    width: 189px;
+    z-index: 0;
 }
 
 .horizontal-phone {
-    margin: 24px 0 0 84px;
+    margin-left: 73px;
     position: relative;
     width: 483px;
     height: 240px;
@@ -155,10 +174,33 @@ nav span:hover{
     width: 483px;
     height: 240px;
     background-image: url(assets/iPhone-Horizontal.png);
+    z-index: 1;
+}
+
+.horizontal-phone > .black-display {
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    height: 189px;
+    width: 333px;
+    z-index: 0;
+}
+
+.content-section-one .phone-btn {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.content-section-one .phone-btn:hover {
+    background-color: gray;
+    opacity: 0.3;
 }
 
 .arrow-right {
-    margin: 25px 0 0 80px;
     width: 16px;
     height: 27px;
     background-image: url(assets/leftArrow.svg);
@@ -239,12 +281,12 @@ nav span:hover{
     height: 100px;
 }
 
-.customDesign-box .image-box .circle,
-.inovativeIdeas-box .image-box .circle, 
-.loveIsTheAnswer-box .image-box .circle, 
-.responsiveLayout-box .image-box .circle,
-.support-box .image-box .circle,
-.feelLikeAStar-box .image-box .circle {
+.customDesign-box .portfolio-item .circle,
+.inovativeIdeas-box .portfolio-item .circle, 
+.loveIsTheAnswer-box .portfolio-item .circle, 
+.responsiveLayout-box .portfolio-item .circle,
+.support-box .portfolio-item .circle,
+.feelLikeAStar-box .portfolio-item .circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,38 +305,38 @@ nav span:hover{
     margin-left: -2px;
 }
 
-.customDesign-box .image-box .circle .image {
+.customDesign-box .portfolio-item .circle .image {
     width: 34px;
     height: 34px;
     background-image: url(assets/pen.svg);
 }
 
-.inovativeIdeas-box .image-box .circle .image {
+.inovativeIdeas-box .portfolio-item .circle .image {
     width: 26px;
     height: 34px;
     background-image: url(assets/bulb.svg);
 }
 
-.loveIsTheAnswer-box .image-box .circle .image {
+.loveIsTheAnswer-box .portfolio-item .circle .image {
     width: 36px;
     height: 30px;
     background-image: url(assets/heart.svg);
 }
 
-.responsiveLayout-box .image-box .circle .image {
+.responsiveLayout-box .portfolio-item .circle .image {
     width: 26px;
     height: 34px;
     background-image: url(assets/phone.svg);
 }
 
-.support-box .image-box .circle .image {
+.support-box .portfolio-item .circle .image {
     width: 34px;
     height: 28px;
     color: #666d89;
     background-image: url(assets/bubble.svg);
 }
 
-.feelLikeAStar-box .image-box .circle .image {
+.feelLikeAStar-box .portfolio-item .circle .image {
     width: 38px;
     height: 34px;
     color: #666d89;
@@ -432,61 +474,61 @@ nav span:hover{
     /* overflow: hidden; */
 }
 
-.portfolio-image-container .image-box {
+.portfolio-image-container .portfolio-item {
     width: 220px;
     height: 187px;
     cursor: pointer;
 }
 
-.portfolio-image-container .image-box:hover {
+.portfolio-image-container .portfolio-item:hover {
     box-shadow: 0 0 10px 1px black;
 }
 
-.portfolio-image-container .image-box.image-1 {
+.portfolio-image-container .portfolio-item.image-1 {
     background-image: url(assets/singolo-portfolio-image-1.png);
 }
 
-.portfolio-image-container .image-box.image-2 {
+.portfolio-image-container .portfolio-item.image-2 {
     background-image: url(assets/singolo-portfolio-image-2.png)
 }
 
-.portfolio-image-container .image-box.image-3 {
+.portfolio-image-container .portfolio-item.image-3 {
     background-image: url(assets/singolo-portfolio-image-3.png)
 }
 
-.portfolio-image-container .image-box.image-4 {
+.portfolio-image-container .portfolio-item.image-4 {
     background-image: url(assets/singolo-portfolio-image-4.png)
 }
 
-.portfolio-image-container .image-box.image-5 {
+.portfolio-image-container .portfolio-item.image-5 {
     background-image: url(assets/singolo-portfolio-image-5.png)
 }
 
-.portfolio-image-container .image-box.image-6 {
+.portfolio-image-container .portfolio-item.image-6 {
     background-image: url(assets/singolo-portfolio-image-6.png)
 }
 
-.portfolio-image-container .image-box.image-7 {
+.portfolio-image-container .portfolio-item.image-7 {
     background-image: url(assets/singolo-portfolio-image-7.png)
 }
 
-.portfolio-image-container .image-box.image-8 {
+.portfolio-image-container .portfolio-item.image-8 {
     background-image: url(assets/singolo-portfolio-image-8.png)
 }
 
-.portfolio-image-container .image-box.image-9 {
+.portfolio-image-container .portfolio-item.image-9 {
     background-image: url(assets/singolo-portfolio-image-9.png)
 }
 
-.portfolio-image-container .image-box.image-10 {
+.portfolio-image-container .portfolio-item.image-10 {
     background-image: url(assets/singolo-portfolio-image-10.png)
 }
 
-.portfolio-image-container .image-box.image-11 {
+.portfolio-image-container .portfolio-item.image-11 {
     background-image: url(assets/singolo-portfolio-image-11.png)
 }
 
-.portfolio-image-container .image-box.image-12 {
+.portfolio-image-container .portfolio-item.image-12 {
     background-image: url(assets/singolo-portfolio-image-12.png)
 }
 
