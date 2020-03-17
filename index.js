@@ -35,34 +35,54 @@ secondPhoneBtn.onclick = () => {
     }
 }
 
-// Slider 
+// Slider
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let isEnabled = true;
+let changerColor = document.querySelector('.slider-section');
 
-function plusSlide() {
-    showSlides(slideIndex += 1);
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
 }
 
-function minusSlide() {
-    showSlides(slideIndex -= 1);  
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active', direction)
+    });
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    });
 }
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName('item');
-    if (n > slides.length){
-        slideIndex = 1;
+function previousItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n - 1);
+    showItem('from-right');
+}
+
+function nextItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n + 1);
+    showItem('from-left'); 
+}
+
+document.querySelector('.arrow-left').addEventListener('click', function() {
+    if(isEnabled) {
+        previousItem(currentItem);
     }
-    if (n < 1) {
-        slideIndex = slides.length;
+});
+
+document.querySelector('.arrow-right').addEventListener('click', function() {
+    if(isEnabled) {
+        nextItem(currentItem);
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "flex";
-}
+});
