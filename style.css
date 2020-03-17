@@ -108,6 +108,14 @@ main {
     background-color: #f06c64;
 }
 
+.color-red {
+    background-color: #f06c64;
+}
+
+.color-blue {
+    background-color: #648BF0;
+}
+
 .content-section-one {
     margin: 0 auto;
     margin-bottom: 6px;
@@ -130,6 +138,12 @@ main {
 }
 
 .content-section-one > .phone-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -198,6 +212,12 @@ main {
 .content-section-one .phone-btn:hover {
     background-color: gray;
     opacity: 0.3;
+}
+
+.three-phones {
+    width: 517px;
+    height: 513px;
+    background-image: url(assets/second-phone-slide.png);
 }
 
 .arrow-right {
