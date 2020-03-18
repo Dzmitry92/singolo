@@ -67,12 +67,14 @@ function previousItem(n) {
     hideItem('to-left');
     changeCurrentItem(n - 1);
     showItem('from-right');
+    changerBackgroundColor();
 }
 
 function nextItem(n) {
     hideItem('to-right');
     changeCurrentItem(n + 1);
     showItem('from-left'); 
+    changerBackgroundColor();
 }
 
 document.querySelector('.arrow-left').addEventListener('click', function() {
@@ -86,3 +88,12 @@ document.querySelector('.arrow-right').addEventListener('click', function() {
         nextItem(currentItem);
     }
 });
+
+function changerBackgroundColor() {
+    if(items[1].classList.contains('active') === false) {
+        changerColor.classList.add('active-color');
+    }
+    else {
+        changerColor.classList.remove('active-color');
+    }
+}
