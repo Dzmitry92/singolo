@@ -1,12 +1,33 @@
 // Navigation links
 
-let navLinks = document.querySelectorAll('.menu-link');
+const navLinks = document.querySelectorAll('a');
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].onclick = () => {
         for (let j = 0; j < navLinks.length; j++) {
             navLinks[j].classList.remove('active-link');
         }
         navLinks[i].classList.add('active-link');
+    }
+}
+
+document.addEventListener("scroll", changeActiveLink);
+window.onload = changeActiveLink();
+
+function changeActiveLink() {
+    const positionY = window.scrollY;
+    const idTags = document.querySelectorAll('[id]');
+
+    for (let i = 0; i < idTags.length; i++) {
+        if(idTags[i].offsetTop - 95 <= positionY &&
+             (idTags[i].offsetTop + idTags[i].offsetHeight - 95)
+              > positionY){
+                for (let x = 0; x < navLinks.length; x++){
+                    navLinks[x].classList.remove('active-link');
+                    if(idTags[i].getAttribute("id") === navLinks[x].getAttribute("href").substring(1)){
+                        navLinks[x].classList.add('active-link');
+                    }
+                }
+              }
     }
 }
 
