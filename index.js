@@ -118,3 +118,44 @@ function changerBackgroundColor() {
         changerColor.classList.remove('active-color');
     }
 }
+
+
+// Portfolio 
+
+const buttons = document.querySelectorAll('.button');
+const portfolioContainer = document.querySelector('.portfolio-image-container');
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick= () => {
+        if(buttons[i].classList.contains('selected') == false){
+            let pic = [...portfolioContainer.querySelectorAll('.portfolio-item')];
+            pic.unshift(pic.pop());
+            for( let index = 0; index < pic.length; index++){
+                portfolioContainer.append(pic[index]);
+            }
+        }
+        for (let j = 0; j < buttons.length; j++) {
+            buttons[j].classList.remove('selected');
+        }
+        buttons[i].classList.add('selected');
+    }
+}
+
+// Active image in portfolio
+
+let thereIsActivity = true;
+const portfolioImages = document.querySelectorAll('.portfolio-item');
+for(let i = 0; i < portfolioImages.length; i++){
+    portfolioImages[i].onclick = () => {
+        if(portfolioImages[i].classList.contains('active-image') == true){
+            thereIsActivity = false;
+        }
+        for (let j = 0; j < portfolioImages.length; j++) {
+            portfolioImages[j].classList.remove('active-image');
+        }
+        if(thereIsActivity) {
+            portfolioImages[i].classList.add('active-image');
+        }
+        thereIsActivity = true;
+    }
+}
