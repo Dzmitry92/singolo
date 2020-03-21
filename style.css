@@ -226,6 +226,7 @@ main {
     background-image: url(assets/rigthArrow.svg);
     opacity: 0.5;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .arrow-left:hover {
@@ -241,6 +242,7 @@ main {
     background-image: url(assets/leftArrow.svg);
     opacity: 0.5;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .arrow-right:hover {

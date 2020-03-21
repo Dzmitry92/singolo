@@ -194,7 +194,6 @@ submitButton.addEventListener("click", (event) => {
     let requiredFields = [...document.querySelectorAll("[required]")];
     let isValid = node => node.checkValidity();
   
-    //Check if all required fields filled with valid data
     if (requiredFields.every(isValid) ) {
       event.preventDefault();
   
