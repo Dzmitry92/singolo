@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/9016fc90f1.js"></script>
 </head>
 <body>
+    <div class="modal hidden">
+        <div class="modal-window hidden"></div>
+    </div>
     <header>
         <div class="content-header">
             <h1 class="logo">singolo<span class="hover-star">*</span></h1>
@@ -256,12 +259,12 @@
                 </div>
                 <div class="main-container">
                     <div class="form-box">
-                        <form>
-                            <input type="text" name="Name" placeholder="Name (Required)" required="">
-                            <input type="email" name="Email" placeholder="Email (Required)" required="">
-                            <input type="text" name="Subject" placeholder="Subject">
-                            <textarea placeholder="Describe your project in detail..."></textarea>
-                            <input type="submit" value="Submit">
+                        <form method="POST">
+                            <input type="text" name="name" placeholder="Name (Required)" required>
+                            <input type="email" name="email" placeholder="Email (Required)" required>
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
+                            <button class="submit-button" type="submit" formmethod="POST">Submit</button>
                         </form>
                     </div>
                     <div class="contact-box">

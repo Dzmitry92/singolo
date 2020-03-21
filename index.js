@@ -159,3 +159,54 @@ for(let i = 0; i < portfolioImages.length; i++){
         thereIsActivity = true;
     }
 }
+
+// Message window
+
+const submitButton = document.querySelector('.submit-button');
+const modal = document.querySelector('.modal');
+const modalWindow = document.querySelector('.modal-window');
+
+function addCloseButton(node){
+    node.innerHTML += "<button class='modal-button' type='button'>OK</button>";
+    const modalButton = document.querySelector(".modal-button");
+    modalButton.addEventListener("click", hideModal);
+    return node;
+}
+
+function addNodeValue (node, defaultValue = "Not completed") {
+    let value = document.querySelector(node).value;
+    value = (value == "") ? defaultValue : value;
+    return value;
+}
+
+function showModal () {
+    modal.classList.remove("hidden");
+    modalWindow.classList.remove("hidden");
+}
+
+function hideModal () {
+    modal.classList.add("hidden");
+    modalWindow.classList.add("hidden");
+    document.forms[0].reset();
+}
+
+button.addEventListener("click", (event) => {
+    let requiredFields = [...document.querySelectorAll("[required]")];
+    let isValid = node => node.checkValidity();
+  
+    //Check if all required fields filled with valid data
+    if (requiredFields.every(isValid) ) {
+      event.preventDefault();
+  
+      modalWindow.innerHTML = "";
+      let title = document.createElement("h3");
+      title.innerText = "The letter was sent";
+      let subject = document.createElement("span");
+      subject.innerText = "Subject: " + addNodeValue("input[name='subject']", "No subject");
+      let description = document.createElement("span");
+      description.innerText = "Description: " + addNodeValue("textarea[name='message']", "No description");
+      modalWindow.append(title, subject, description);
+      addCloseButton(modalWindow);
+      showModal();
+    }
+});
