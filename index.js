@@ -190,7 +190,7 @@ function hideModal () {
     document.forms[0].reset();
 }
 
-button.addEventListener("click", (event) => {
+submitButton.addEventListener("click", (event) => {
     let requiredFields = [...document.querySelectorAll("[required]")];
     let isValid = node => node.checkValidity();
   
