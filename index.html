@@ -13,43 +13,45 @@
         <div class="modal-window hidden"></div>
     </div>
     <header>
-        <div class="content-header">
-            <h1 class="logo">singolo<span class="hover-star">*</span></h1>
+        <div class="content content-header">
+            <button class="burger" type="button"></button>
+            <h1>singolo<span class="hover-star">*</span></h1>
             <nav>
-                <a href="#home">home</a>
-                <a href="#services">services</a>
-                <a href="#portfolio">portfolio</a>
-                <a href="#about">about</a>
-                <a href="#contact">contact</a>
+                <ul>
+                    <li><a class="current" href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
     <main>
         <section id="home" class="slider-section">
-            <div class="item-container">
+            <div class="content item-container">
+                <div class="arrow-left"></div>
                 <div class="item active">
-                    <div class="two-phones">
-                        <div class="vertical-phone">
-                            <div class="vertical-phone-container"></div>
-                            <div class="black-display"></div>
-                            <div style="bottom: 33px; left: 86px;" class="phone-btn" ></div>
-                        </div>
-                        <div class="horizontal-phone">
-                            <div class="horizontal-phone-container"></div>
-                            <div class="black-display"></div>
-                            <div style="bottom: 111px; left: 8px;" class="phone-btn" ></div>
-                        </div>
+                    <div class="phone vertical-phone">
+                        <div class="phone-display phone-click"></div>
+                        <div class="phone-frame phone-click"></div>
+                        <div class="phone-shadow"></div>
+                    </div>
+                    <div class="phone horizontal-phone">
+                        <div class="phone-display phone-click"></div>
+                        <div class="phone-frame phone-click"></div>
+                        <div class="phone-shadow"></div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="three-phones"></div>
+                    <img width="517" height="513" class="three-phones" src="assets/second-phone-slide.png" alt="three-phones">
                 </div>
-                <div class="arrow-left"></div>
+                <!-- <div class="arrow-left"></div> -->
                 <div class="arrow-right"></div>
             </div>
         </section>
         <section id="services" class="section-two">
-            <div class="content-section-two">
+            <div class="content">
                 <div class="description-container">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -58,92 +60,88 @@
                     </p>
                 </div>
                 <div class="icon-description-container">
-                    <div class="first-line-description">
-                        <div class="customDesign-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>Custom Design</h3>
-                                <p>Curabitur vestibulum eget mauris quis
-                                    laoreet. Phasellus in quarn laoreet, 
-                                    viverra lacus ut, ultrices velit.
-                                </p>
+                    <div class="customDesign-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
                             </div>
                         </div>
-                        <div class="inovativeIdeas-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>Inovative Ideas</h3>
-                                <p>Quisque luctus, quam eget molestie commodo, 
-                                    lacus purus cursus purus, nec rutrum tellus
-                                    dolor id lorem.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="loveIsTheAnswer-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>Love Is The Answer</h3>
-                                <p>Nulla sed nunc et tortor luctus faucibus.
-                                    Morbi at aliquet turpis, et consequat felis.
-                                    Quisque condimentum.
-                                </p>
-                            </div>
+                        <div class="text-box">
+                            <h3>Custom Design</h3>
+                            <p>Curabitur vestibulum eget mauris quis
+                                laoreet. Phasellus in quarn laoreet, 
+                                viverra lacus ut, ultrices velit.
+                            </p>
                         </div>
                     </div>
-                    <div class="second-line-description">
-                        <div class="responsiveLayout-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>Responsive Layout</h3>
-                                <p>Sed porttitor placerat thoncus. In at nunc tellus. 
-                                    Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                    <div class="inovativeIdeas-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
                             </div>
                         </div>
-                        <div class="support-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>24 / 7 Support</h3>
-                                <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
-                                    Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
-                            </div>
+                        <div class="text-box">
+                            <h3>Inovative Ideas</h3>
+                            <p>Quisque luctus, quam eget molestie commodo, 
+                                lacus purus cursus purus, nec rutrum tellus
+                                dolor id lorem.
+                            </p>
                         </div>
-                        <div class="feelLikeAStar-box">
-                            <div class="image-box">
-                                <div class="circle">
-                                    <div class="image"></div>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <h3>Feel Like A Star</h3>
-                                <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
-                            </div>
                     </div>
+                    <div class="loveIsTheAnswer-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <h3>Love Is The Answer</h3>
+                            <p>Nulla sed nunc et tortor luctus faucibus.
+                                Morbi at aliquet turpis, et consequat felis.
+                                Quisque condimentum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsiveLayout-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <h3>Responsive Layout</h3>
+                            <p>Sed porttitor placerat thoncus. In at nunc tellus. 
+                                Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                        </div>
+                    </div>
+                    <div class="support-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <h3>24 / 7 Support</h3>
+                            <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
+                                Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
+                        </div>
+                    </div>
+                    <div class="feelLikeAStar-box item-responsive">
+                        <div class="image-box">
+                            <div class="circle">
+                                <div class="image"></div>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <h3>Feel Like A Star</h3>
+                            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="portfolio" class="section-three">
-            <div class="content-section">
+            <div class="content">
                 <div class="text-container">
                     <h2>Portfolio</h2>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
@@ -165,23 +163,23 @@
                     </div>
                 </div>
                 <div class="portfolio-image-container">
-                    <div class="portfolio-item image-1"></div>
-                    <div class="portfolio-item image-2"></div>
-                    <div class="portfolio-item image-3"></div>
-                    <div class="portfolio-item image-4"></div>
-                    <div class="portfolio-item image-5"></div>
-                    <div class="portfolio-item image-6"></div>
-                    <div class="portfolio-item image-7"></div>
-                    <div class="portfolio-item image-8"></div>
-                    <div class="portfolio-item image-9"></div>
-                    <div class="portfolio-item image-10"></div>
-                    <div class="portfolio-item image-11"></div>
-                    <div class="portfolio-item image-12"></div>
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-1.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-2.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-3.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-4.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-5.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-6.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-7.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-8.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-9.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-10.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-11.png" alt="img">
+                    <img class="portfolio-item" src="assets/singolo-portfolio-image-12.png" alt="img">
                 </div>
             </div>
         </section>
-        <section id="about" class="section-four">
-            <div class="content-section">
+        <section id="about" class="section-aboutUs">
+            <div class="content">
                 <div class="text-container">
                     <h2>About Us</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -191,7 +189,7 @@
                 </div>
                 <div class="person-container">
                     <div class="jensen-box">
-                        <div class="person-image-box jensen-image"></div>
+                        <img class="person-image-box" src="assets/Jensen-image.png" alt="img">
                         <h3>Adam Jensen</h3>
                         <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, 
                             nec rutrum tellus dolor id lorem.
@@ -212,7 +210,7 @@
                         </div>
                     </div>
                     <div class="miles-box">
-                        <div class="person-image-box miles-image"></div>
+                        <img class="person-image-box" src="assets/Miles-image.png" alt="img">
                         <h3>Desmond Miles</h3>
                         <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus 
                             in quam laoreet, viverra lacus ut, ultrices velit.
@@ -233,7 +231,7 @@
                         </div>
                     </div>
                     <div class="visari-box">
-                        <div class="person-image-box visari-image"></div>
+                        <img class="person-image-box" src="assets/Visari-image.png" alt="img">
                         <h3>Scolara Visari</h3>
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet 
                             turpis, et consequat felis. Quisque condimentum.
@@ -244,7 +242,7 @@
                             </div>
                             <div class="circle">
                                 <img src="assets/googlePlus.png" alt="img">
-                            </div> 
+                            </div>
                             <div class="circle">
                                 <i class="fab fa-twitter"></i>
                             </div>
@@ -257,7 +255,7 @@
             </div>
         </section>
         <section id="contact" class="section-five">
-            <div class="content-section">
+            <div class="content">
                 <div class="text-container">
                     <h2>Get a Quote</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo 
@@ -266,15 +264,13 @@
                     </p>
                 </div>
                 <div class="main-container">
-                    <div class="form-box">
-                        <form method="POST">
-                            <input type="text" name="name" placeholder="Name (Required)" required>
-                            <input type="email" name="email" placeholder="Email (Required)" required>
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
-                            <button class="submit-button" type="submit" formmethod="POST">Submit</button>
-                        </form>
-                    </div>
+                    <form method="POST">
+                        <input type="text" name="name" placeholder="Name (Required)" required>
+                        <input type="email" name="email" placeholder="Email (Required)" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
+                        <button class="submit-button" type="submit" formmethod="POST">Submit</button>
+                    </form>
                     <div class="contact-box">
                         <h3>Contact information</h3>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
@@ -305,7 +301,7 @@
         </section>
     </main>
     <footer>
-        <div class="content-section footer-section">
+        <div class="content footer-section">
             <span>© Copyright 2013</span>
             <div class="social-contact-box">
                 <div class="circle">

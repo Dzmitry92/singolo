@@ -1,6 +1,6 @@
 // Navigation links
 
-const navLinks = document.querySelectorAll('a');
+const navLinks = document.querySelectorAll("nav ul li a");
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].onclick = () => {
         for (let j = 0; j < navLinks.length; j++) {
@@ -31,30 +31,88 @@ function changeActiveLink() {
     }
 }
 
-// Activating phone screens
 
-let firstPhoneBtn = document.querySelectorAll('.phone-btn')[0];
-let secondPhoneBtn = document.querySelectorAll('.phone-btn')[1];
-let verticalPhoneDisplay = document.querySelectorAll('.black-display')[0];
-let horizontalPhoneDisplay = document.querySelectorAll('.black-display')[1];
 
-firstPhoneBtn.onclick = () => {
-    if(verticalPhoneDisplay.style.zIndex == 1){
-        verticalPhoneDisplay.style.zIndex = 0;
-    }
-    else{
-        verticalPhoneDisplay.style.zIndex = 1;
-    }
+// Activating phone screens 
+
+//commented out the function, because I did not have time to redo the slider :(
+
+// let firstPhoneBtn = document.querySelectorAll('.phone-btn')[0];
+// let secondPhoneBtn = document.querySelectorAll('.phone-btn')[1];
+// let verticalPhoneDisplay = document.querySelectorAll('.black-display')[0];
+// let horizontalPhoneDisplay = document.querySelectorAll('.black-display')[1];
+
+// firstPhoneBtn.onclick = () => {
+//     if(verticalPhoneDisplay.style.zIndex == 1){
+//         verticalPhoneDisplay.style.zIndex = 0;
+//     }
+//     else{
+//         verticalPhoneDisplay.style.zIndex = 1;
+//     }
+// }
+
+// secondPhoneBtn.onclick = () => {
+//     if(horizontalPhoneDisplay.style.zIndex == 1){
+//         horizontalPhoneDisplay.style.zIndex = 0;
+//     }
+//     else{
+//         horizontalPhoneDisplay.style.zIndex = 1;
+//     }
+// }
+
+const burger = document.querySelector(".burger");
+const header = document.querySelector("header");
+const h1 = document.querySelector("h1");
+const nav = header.querySelector("nav");
+let menuOpened = false;
+darkenContent(header);
+const headerBackground = header.querySelector(".dark-background");
+hideDarkBackground();
+
+function drawMenu() {
+  if (document.documentElement.clientWidth >= 768) {
+    menuOpened = true;
+  }
+  if(menuOpened) {
+    hideDarkBackground();
+    burger.classList.remove("rotated90");
+    h1.classList.remove("to-left");
+    nav.classList.remove("to-right");
+  } else {
+    showDarkBackground();
+    burger.classList.add("rotated90");
+    h1.classList.add("to-left");
+    nav.classList.add("to-right");
+  }
+  menuOpened = !menuOpened;
 }
 
-secondPhoneBtn.onclick = () => {
-    if(horizontalPhoneDisplay.style.zIndex == 1){
-        horizontalPhoneDisplay.style.zIndex = 0;
-    }
-    else{
-        horizontalPhoneDisplay.style.zIndex = 1;
-    }
+function hideDarkBackground(){
+  if(!headerBackground.classList.contains("transparent")) {
+    headerBackground.classList.add("transparent");
+  }
 }
+
+function showDarkBackground(){
+  if(headerBackground.classList.contains("transparent")) {
+    headerBackground.classList.remove("transparent");
+  }
+}
+
+burger.addEventListener("click", drawMenu);
+headerBackground.addEventListener("click", drawMenu);
+
+window.addEventListener("resize", () => {
+  if(document.documentElement.clientWidth >= 768) {
+    drawMenu();
+  }
+});
+
+navLinks.forEach(link => link.addEventListener("click", e => {
+  if(document.documentElement.clientWidth < 768) {
+    setTimeout(drawMenu, 1100);
+  }
+}));
 
 // Slider
 
@@ -85,16 +143,16 @@ function showItem(direction) {
 }
 
 function previousItem(n) {
-    hideItem('to-left');
-    changeCurrentItem(n - 1);
-    showItem('from-right');
+    hideItem('to-right');
+    changeCurrentItem(n + 1);
+    showItem('from-left');
     changerBackgroundColor();
 }
 
 function nextItem(n) {
-    hideItem('to-right');
-    changeCurrentItem(n + 1);
-    showItem('from-left'); 
+    hideItem('to-left');
+    changeCurrentItem(n - 1);
+    showItem('from-right'); 
     changerBackgroundColor();
 }
 
@@ -166,6 +224,18 @@ const submitButton = document.querySelector('.submit-button');
 const modal = document.querySelector('.modal');
 const modalWindow = document.querySelector('.modal-window');
 
+function darkenContent(node, onClickCallback = false){
+    if(node.querySelector(".dark-background") === null) {
+      let background = document.createElement("div");
+      background.classList.add("dark-background");
+      node.append(background);
+      if (onClickCallback) {
+        node.querySelector(".dark-background").addEventListener("click", onClickCallback);
+      }
+    }
+    return node;
+}
+
 function addCloseButton(node){
     node.innerHTML += "<button class='modal-button' type='button'>OK</button>";
     const modalButton = document.querySelector(".modal-button");
@@ -195,17 +265,21 @@ submitButton.addEventListener("click", (event) => {
     let isValid = node => node.checkValidity();
   
     if (requiredFields.every(isValid) ) {
-      event.preventDefault();
-  
-      modalWindow.innerHTML = "";
-      let title = document.createElement("h3");
-      title.innerText = "The letter was sent";
-      let subject = document.createElement("span");
-      subject.innerText = "Subject: " + addNodeValue("input[name='subject']", "No subject");
-      let description = document.createElement("span");
-      description.innerText = "Description: " + addNodeValue("textarea[name='message']", "No description");
-      modalWindow.append(title, subject, description);
-      addCloseButton(modalWindow);
-      showModal();
+        event.preventDefault();
+        modalWindow.innerHTML = "";
+        let title = document.createElement("h3");
+        title.innerText = "The letter was sent";
+        let subject = document.createElement("span");
+        subject.innerText = "Subject: " + addNodeValue("input[name='subject']", "No subject");
+        let description = document.createElement("span");
+        description.innerText = "Description: " + addNodeValue("textarea[name='message']", "No description");
+        modalWindow.append(title, subject, description);
+        addCloseButton(modalWindow);
+        darkenContent(modal, hideModal);
+        const modalBackground = modal.querySelector(".dark-background");
+        if (!modalBackground.classList.contains("height100percents")) {
+            modalBackground.classList.add("height100percents");
+        }
+        showModal();
     }
 });
