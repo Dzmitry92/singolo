@@ -18,16 +18,16 @@ function changeActiveLink() {
     const idTags = document.querySelectorAll('[id]');
 
     for (let i = 0; i < idTags.length; i++) {
-        if(idTags[i].offsetTop - 95 <= positionY &&
-             (idTags[i].offsetTop + idTags[i].offsetHeight - 95)
-              > positionY){
-                for (let x = 0; x < navLinks.length; x++){
-                    navLinks[x].classList.remove('active-link');
-                    if(idTags[i].getAttribute("id") === navLinks[x].getAttribute("href").substring(1)){
-                        navLinks[x].classList.add('active-link');
-                    }
+        if (idTags[i].offsetTop - 95 <= positionY &&
+            (idTags[i].offsetTop + idTags[i].offsetHeight - 95) >
+            positionY) {
+            for (let x = 0; x < navLinks.length; x++) {
+                navLinks[x].classList.remove('active-link');
+                if (idTags[i].getAttribute("id") === navLinks[x].getAttribute("href").substring(1)) {
+                    navLinks[x].classList.add('active-link');
                 }
-              }
+            }
+        }
     }
 }
 
@@ -70,48 +70,48 @@ const headerBackground = header.querySelector(".dark-background");
 hideDarkBackground();
 
 function drawMenu() {
-  if (document.documentElement.clientWidth >= 768) {
-    menuOpened = true;
-  }
-  if(menuOpened) {
-    hideDarkBackground();
-    burger.classList.remove("rotated90");
-    h1.classList.remove("to-left");
-    nav.classList.remove("to-right");
-  } else {
-    showDarkBackground();
-    burger.classList.add("rotated90");
-    h1.classList.add("to-left");
-    nav.classList.add("to-right");
-  }
-  menuOpened = !menuOpened;
+    if (document.documentElement.clientWidth >= 768) {
+        menuOpened = true;
+    }
+    if (menuOpened) {
+        hideDarkBackground();
+        burger.classList.remove("rotated90");
+        h1.classList.remove("to-left");
+        nav.classList.remove("to-right");
+    } else {
+        showDarkBackground();
+        burger.classList.add("rotated90");
+        h1.classList.add("to-left");
+        nav.classList.add("to-right");
+    }
+    menuOpened = !menuOpened;
 }
 
-function hideDarkBackground(){
-  if(!headerBackground.classList.contains("transparent")) {
-    headerBackground.classList.add("transparent");
-  }
+function hideDarkBackground() {
+    if (!headerBackground.classList.contains("transparent")) {
+        headerBackground.classList.add("transparent");
+    }
 }
 
-function showDarkBackground(){
-  if(headerBackground.classList.contains("transparent")) {
-    headerBackground.classList.remove("transparent");
-  }
+function showDarkBackground() {
+    if (headerBackground.classList.contains("transparent")) {
+        headerBackground.classList.remove("transparent");
+    }
 }
 
 burger.addEventListener("click", drawMenu);
 headerBackground.addEventListener("click", drawMenu);
 
 window.addEventListener("resize", () => {
-  if(document.documentElement.clientWidth >= 768) {
-    drawMenu();
-  }
+    if (document.documentElement.clientWidth >= 768) {
+        drawMenu();
+    }
 });
 
 navLinks.forEach(link => link.addEventListener("click", e => {
-  if(document.documentElement.clientWidth < 768) {
-    setTimeout(drawMenu, 1100);
-  }
+    if (document.documentElement.clientWidth < 768) {
+        setTimeout(drawMenu, 1100);
+    }
 }));
 
 // Slider
@@ -128,14 +128,14 @@ function changeCurrentItem(n) {
 function hideItem(direction) {
     isEnabled = false;
     items[currentItem].classList.add(direction);
-    items[currentItem].addEventListener('animationend', function() {
+    items[currentItem].addEventListener('animationend', function () {
         this.classList.remove('active', direction)
     });
 }
 
 function showItem(direction) {
     items[currentItem].classList.add('next', direction);
-    items[currentItem].addEventListener('animationend', function() {
+    items[currentItem].addEventListener('animationend', function () {
         this.classList.remove('next', direction);
         this.classList.add('active');
         isEnabled = true;
@@ -152,27 +152,26 @@ function previousItem(n) {
 function nextItem(n) {
     hideItem('to-left');
     changeCurrentItem(n - 1);
-    showItem('from-right'); 
+    showItem('from-right');
     changerBackgroundColor();
 }
 
-document.querySelector('.arrow-left').addEventListener('click', function() {
-    if(isEnabled) {
+document.querySelector('.arrow-left').addEventListener('click', function () {
+    if (isEnabled) {
         previousItem(currentItem);
     }
 });
 
-document.querySelector('.arrow-right').addEventListener('click', function() {
-    if(isEnabled) {
+document.querySelector('.arrow-right').addEventListener('click', function () {
+    if (isEnabled) {
         nextItem(currentItem);
     }
 });
 
 function changerBackgroundColor() {
-    if(items[1].classList.contains('active') === false) {
+    if (items[1].classList.contains('active') === false) {
         changerColor.classList.add('active-color');
-    }
-    else {
+    } else {
         changerColor.classList.remove('active-color');
     }
 }
@@ -184,11 +183,11 @@ const buttons = document.querySelectorAll('.button');
 const portfolioContainer = document.querySelector('.portfolio-image-container');
 
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].onclick= () => {
-        if(buttons[i].classList.contains('selected') == false){
+    buttons[i].onclick = () => {
+        if (buttons[i].classList.contains('selected') == false) {
             let pic = [...portfolioContainer.querySelectorAll('.portfolio-item')];
             pic.unshift(pic.pop());
-            for( let index = 0; index < pic.length; index++){
+            for (let index = 0; index < pic.length; index++) {
                 portfolioContainer.append(pic[index]);
             }
         }
@@ -203,15 +202,15 @@ for (let i = 0; i < buttons.length; i++) {
 
 let thereIsActivity = true;
 const portfolioImages = document.querySelectorAll('.portfolio-item');
-for(let i = 0; i < portfolioImages.length; i++){
+for (let i = 0; i < portfolioImages.length; i++) {
     portfolioImages[i].onclick = () => {
-        if(portfolioImages[i].classList.contains('active-image') == true){
+        if (portfolioImages[i].classList.contains('active-image') == true) {
             thereIsActivity = false;
         }
         for (let j = 0; j < portfolioImages.length; j++) {
             portfolioImages[j].classList.remove('active-image');
         }
-        if(thereIsActivity) {
+        if (thereIsActivity) {
             portfolioImages[i].classList.add('active-image');
         }
         thereIsActivity = true;
@@ -224,37 +223,37 @@ const submitButton = document.querySelector('.submit-button');
 const modal = document.querySelector('.modal');
 const modalWindow = document.querySelector('.modal-window');
 
-function darkenContent(node, onClickCallback = false){
-    if(node.querySelector(".dark-background") === null) {
-      let background = document.createElement("div");
-      background.classList.add("dark-background");
-      node.append(background);
-      if (onClickCallback) {
-        node.querySelector(".dark-background").addEventListener("click", onClickCallback);
-      }
+function darkenContent(node, onClickCallback = false) {
+    if (node.querySelector(".dark-background") === null) {
+        let background = document.createElement("div");
+        background.classList.add("dark-background");
+        node.append(background);
+        if (onClickCallback) {
+            node.querySelector(".dark-background").addEventListener("click", onClickCallback);
+        }
     }
     return node;
 }
 
-function addCloseButton(node){
+function addCloseButton(node) {
     node.innerHTML += "<button class='modal-button' type='button'>OK</button>";
     const modalButton = document.querySelector(".modal-button");
     modalButton.addEventListener("click", hideModal);
     return node;
 }
 
-function addNodeValue (node, defaultValue = "Not completed") {
+function addNodeValue(node, defaultValue = "Not completed") {
     let value = document.querySelector(node).value;
     value = (value == "") ? defaultValue : value;
     return value;
 }
 
-function showModal () {
+function showModal() {
     modal.classList.remove("hidden");
     modalWindow.classList.remove("hidden");
 }
 
-function hideModal () {
+function hideModal() {
     modal.classList.add("hidden");
     modalWindow.classList.add("hidden");
     document.forms[0].reset();
@@ -263,8 +262,8 @@ function hideModal () {
 submitButton.addEventListener("click", (event) => {
     let requiredFields = [...document.querySelectorAll("[required]")];
     let isValid = node => node.checkValidity();
-  
-    if (requiredFields.every(isValid) ) {
+
+    if (requiredFields.every(isValid)) {
         event.preventDefault();
         modalWindow.innerHTML = "";
         let title = document.createElement("h3");
